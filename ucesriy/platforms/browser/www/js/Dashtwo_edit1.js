@@ -581,142 +581,142 @@ function selectfloodincFeature(e) {
 		}
 	}
 	
+	for (i = 0; i < sitearray.length; i++) { 
+	
+	if (highchart === sitearray[i][2] ){
+		if (sitearray[i][0]==="Site A"&&sitearray[i][1]==="Area of Site"){
+			sitea_areasite = sitearray[i][3].toString()+'%';
+		}
+		if (sitearray[i][0]==="Site A"&&sitearray[i][1]==="Distance from A Road"){
+			sitea_road = sitearray[i][3].toString()+'%';
+		}
+		if (sitearray[i][0]==="Site A"&&sitearray[i][1]==="Distance from center of borough"){
+			sitea_center = sitearray[i][3].toString()+'%';
+		}
+		if (sitearray[i][0]==="Site B"&&sitearray[i][1]==="Area of Site"){
+			siteb_areasite = sitearray[i][3].toString()+'%';
+		}
+		if (sitearray[i][0]==="Site B"&&sitearray[i][1]==="Distance from A Road"){
+			siteb_road = sitearray[i][3].toString()+'%';
+		}
+		if (sitearray[i][0]==="Site B"&&sitearray[i][1]==="Distance from center of borough"){
+			siteb_center = sitearray[i][3].toString()+'%';
+		}
+		if (sitearray[i][0]==="Site C"&&sitearray[i][1]==="Area of Site"){
+			sitec_areasite = sitearray[i][3].toString()+'%';
+		}
+		if (sitearray[i][0]==="Site C"&&sitearray[i][1]==="Distance from A Road"){
+			sitec_road = sitearray[i][3].toString()+'%';
+		}
+		if (sitearray[i][0]==="Site C"&&sitearray[i][1]==="Distance from center of borough"){
+			sitec_center = sitearray[i][3].toString()+'%';
+		}
+	}
+	}
+	
 		//arrange data for chart two and three
 	if (highchart === 'Kingston upon Thames'){
-		dataLU = KingstonuponThamesLU;
 		dataCO = KingstonuponThamesCO;
 	}
 	
 	if (highchart === 'Croydon'){
-		dataLU = CroydonLU;
 		dataCO = CroydonCO;
 	}
 	
 	if (highchart === 'Bromley'){
-		dataLU = BromleyLU;
 		dataCO = BromleyCO;
 	}
 	
 	if (highchart === 'Hounslow'){
-		dataLU = HounslowLU;
 		dataCO = HounslowCO;
 	}
 	
 	if (highchart === 'Ealing'){
-		dataLU = EalingLU;
 		dataCO = EalingCO;
 	}
 	
 	if (highchart === 'Havering'){
-		dataLU = HaveringLU;
 		dataCO = HaveringCO;
 	}
 	if (highchart === 'Hillingdon'){
-		dataLU = HillingdonLU;
 		dataCO = HillingdonCO;
 	}
 	if (highchart === 'Harrow'){
-		dataLU = HarrowLU;
 		dataCO = HarrowCO;
 	}
 	if (highchart === 'Brent'){
-		dataLU = BrentLU;
 		dataCO = BrentCO;
 	}
 	if (highchart === 'Barnet'){
-		dataLU = BarnetLU;
 		dataCO = BarnetCO;
 	}
 	if (highchart === 'Lambeth'){
-		dataLU = LambethLU;
 		dataCO = LambethCO;
 	}
 	if (highchart === 'Southwark'){
-		dataLU = SouthwarkLU;
 		dataCO = SouthwarkCO;
 	}
 	if (highchart === 'Lewisham'){
-		dataLU = LewishamLU;
 		dataCO = LewishamCO;
 	}
 	if (highchart === 'Greenwich'){
-		dataLU = GreenwichLU;
 		dataCO = GreenwichCO;
 	}
 	if (highchart === 'Bexley'){
-		dataLU = BexleyLU;
 		dataCO = BexleyCO;
 	}
 	if (highchart === 'Enfield'){
-		dataLU = EnfieldLU;
 		dataCO = EnfieldCO;
 	}
 	if (highchart === 'Waltham Forest'){
-		dataLU = WalthamForestLU;
 		dataCO = WalthamForestCO;
 	}
 	if (highchart === 'Redbridge'){
-		dataLU = RedbridgeLU;
 		dataCO = RedbridgeCO;
 	}
 	if (highchart === 'Sutton'){
-		dataLU = SuttonLU;
 		dataCO = SuttonCO;
 	}
 	if (highchart === 'Richmond upon Thames'){
-		dataLU = RichmonduponThamesLU;
 		dataCO = RichmonduponThamesCO;
 	}
 	if (highchart === 'Merton'){
-		dataLU = MertonLU;
 		dataCO = MertonCO;
 	}
 	if (highchart === 'Wandsworth'){
-		dataLU = WandsworthLU;
 		dataCO = WandsworthCO;
 	}
 	if (highchart === 'Hammersmith and Fulham'){
-		dataLU = HammersmithandFulhamLU;
 		dataCO = HammersmithandFulhamCO;
 	}
 	if (highchart === 'Kensington and Chelsea'){
-		dataLU = KensingtonandChelseaLU;
 		dataCO = KensingtonandChelseaCO;
 	}
 	if (highchart === 'Westminster'){
-		dataLU = WestminsterLU;
 		dataCO = WestminsterCO;
 	}
 	if (highchart === 'Camden'){
-		dataLU = CamdenLU;
 		dataCO = CamdenCO;
 	}
 	if (highchart === 'Tower Hamlets'){
-		dataLU = TowerHamletsLU;
 		dataCO = TowerHamletsCO;
 	}
 	if (highchart === 'Islington'){
-		dataLU = IslingtonLU;
 		dataCO = IslingtonCO;
 	}
 	if (highchart === 'Hackney'){
-		dataLU = HackneyLU;
 		dataCO = HackneyCO;
 	}
 	if (highchart === 'Haringey'){
-		dataLU = HaringeyLU;
 		dataCO = HaringeyCO;
 	}
 	if (highchart === 'Newham'){
-		dataLU = NewhamLU;
 		dataCO = NewhamCO;
 	}
 	if (highchart === 'Barking and Dagenham'){
-		dataLU = BarkingandDagenhamLU;
 		dataCO = BarkingandDagenhamCO;
 	}
 	if (highchart === 'City of London'){
-		dataLU = CityofLondonLU;
 		dataCO = CityofLondonCO;
 	}
 		
@@ -749,40 +749,7 @@ layer.bindPopup(onpopup);
 
 }
 
-//variable for landuse and child old
-var KingstonuponThamesLU = [];
-var CroydonLU = [];
-var BromleyLU = [];
-var HounslowLU = [];
-var EalingLU = [];
-var HaveringLU=[];
-var HillingdonLU=[];
-var HarrowLU=[];
-var BrentLU=[];
-var BarnetLU =[];
-var LambethLU = [];
-var SouthwarkLU =[];
-var LewishamLU=[];
-var GreenwichLU=[];
-var BexleyLU=[];
-var EnfieldLU=[];
-var WalthamForestLU=[];
-var RedbridgeLU=[];
-var SuttonLU=[];
-var RichmonduponThamesLU=[];
-var MertonLU=[];
-var WandsworthLU=[];
-var HammersmithandFulhamLU=[];
-var KensingtonandChelseaLU=[];
-var WestminsterLU=[];
-var CamdenLU=[];
-var TowerHamletsLU=[];
-var IslingtonLU=[];
-var HackneyLU=[];
-var HaringeyLU=[];
-var NewhamLU=[];
-var BarkingandDagenhamLU=[];
-var CityofLondonLU=[];
+
 var KingstonuponThamesCO=[];
 var CroydonCO=[];
 var BromleyCO =[];
@@ -853,40 +820,6 @@ for (i = 0; i < boroughfloodincarray.length; i++) {
 }
 }
 
-//layout landuse data
-KingstonuponThamesLU.push(["Domestic Buildings",boroughfloodincarray[0][6]],["Domestic Gardens",boroughfloodincarray[0][7]],["Non Domestic Buildings",boroughfloodincarray[0][8]],["Road",boroughfloodincarray[0][9]],["Rail",boroughfloodincarray[0][10]],["Path",boroughfloodincarray[0][11]],["Greenspace",boroughfloodincarray[0][12]],["Water",boroughfloodincarray[0][13]],["Other Land Uses",boroughfloodincarray[0][14]]);
-CroydonLU.push(["Domestic Buildings",boroughfloodincarray[1][6]],["Domestic Gardens",boroughfloodincarray[1][7]],["Non Domestic Buildings",boroughfloodincarray[1][8]],["Road",boroughfloodincarray[1][9]],["Rail",boroughfloodincarray[1][10]],["Path",boroughfloodincarray[1][11]],["Greenspace",boroughfloodincarray[1][12]],["Water",boroughfloodincarray[1][13]],["Other Land Uses",boroughfloodincarray[1][14]]);
-BromleyLU.push(["Domestic Buildings",boroughfloodincarray[2][6]],["Domestic Gardens",boroughfloodincarray[2][7]],["Non Domestic Buildings",boroughfloodincarray[2][8]],["Road",boroughfloodincarray[2][9]],["Rail",boroughfloodincarray[2][10]],["Path",boroughfloodincarray[2][11]],["Greenspace",boroughfloodincarray[2][12]],["Water",boroughfloodincarray[2][13]],["Other Land Uses",boroughfloodincarray[2][14]]);
-HounslowLU.push(["Domestic Buildings",boroughfloodincarray[3][6]],["Domestic Gardens",boroughfloodincarray[3][7]],["Non Domestic Buildings",boroughfloodincarray[3][8]],["Road",boroughfloodincarray[3][9]],["Rail",boroughfloodincarray[3][10]],["Path",boroughfloodincarray[3][11]],["Greenspace",boroughfloodincarray[3][12]],["Water",boroughfloodincarray[3][13]],["Other Land Uses",boroughfloodincarray[3][14]]);
-EalingLU.push(["Domestic Buildings",boroughfloodincarray[4][6]],["Domestic Gardens",boroughfloodincarray[4][7]],["Non Domestic Buildings",boroughfloodincarray[4][8]],["Road",boroughfloodincarray[4][9]],["Rail",boroughfloodincarray[4][10]],["Path",boroughfloodincarray[4][11]],["Greenspace",boroughfloodincarray[4][12]],["Water",boroughfloodincarray[4][13]],["Other Land Uses",boroughfloodincarray[4][14]]);
-HaveringLU.push(["Domestic Buildings",boroughfloodincarray[5][6]],["Domestic Gardens",boroughfloodincarray[5][7]],["Non Domestic Buildings",boroughfloodincarray[5][8]],["Road",boroughfloodincarray[5][9]],["Rail",boroughfloodincarray[5][10]],["Path",boroughfloodincarray[5][11]],["Greenspace",boroughfloodincarray[5][12]],["Water",boroughfloodincarray[5][13]],["Other Land Uses",boroughfloodincarray[5][14]]);
-HillingdonLU.push(["Domestic Buildings",boroughfloodincarray[6][6]],["Domestic Gardens",boroughfloodincarray[6][7]],["Non Domestic Buildings",boroughfloodincarray[6][8]],["Road",boroughfloodincarray[6][9]],["Rail",boroughfloodincarray[6][10]],["Path",boroughfloodincarray[6][11]],["Greenspace",boroughfloodincarray[6][12]],["Water",boroughfloodincarray[6][13]],["Other Land Uses",boroughfloodincarray[6][14]]);
-HarrowLU.push(["Domestic Buildings",boroughfloodincarray[7][6]],["Domestic Gardens",boroughfloodincarray[7][7]],["Non Domestic Buildings",boroughfloodincarray[7][8]],["Road",boroughfloodincarray[7][9]],["Rail",boroughfloodincarray[7][10]],["Path",boroughfloodincarray[7][11]],["Greenspace",boroughfloodincarray[7][12]],["Water",boroughfloodincarray[7][13]],["Other Land Uses",boroughfloodincarray[7][14]]);
-BrentLU.push(["Domestic Buildings",boroughfloodincarray[8][6]],["Domestic Gardens",boroughfloodincarray[8][7]],["Non Domestic Buildings",boroughfloodincarray[8][8]],["Road",boroughfloodincarray[8][9]],["Rail",boroughfloodincarray[8][10]],["Path",boroughfloodincarray[8][11]],["Greenspace",boroughfloodincarray[8][12]],["Water",boroughfloodincarray[8][13]],["Other Land Uses",boroughfloodincarray[8][14]]);
-BarnetLU.push(["Domestic Buildings",boroughfloodincarray[9][6]],["Domestic Gardens",boroughfloodincarray[9][7]],["Non Domestic Buildings",boroughfloodincarray[9][8]],["Road",boroughfloodincarray[9][9]],["Rail",boroughfloodincarray[9][10]],["Path",boroughfloodincarray[9][11]],["Greenspace",boroughfloodincarray[9][12]],["Water",boroughfloodincarray[9][13]],["Other Land Uses",boroughfloodincarray[9][14]]);
-LambethLU.push(["Domestic Buildings",boroughfloodincarray[9][6]],["Domestic Gardens",boroughfloodincarray[10][7]],["Non Domestic Buildings",boroughfloodincarray[10][8]],["Road",boroughfloodincarray[10][9]],["Rail",boroughfloodincarray[10][10]],["Path",boroughfloodincarray[10][11]],["Greenspace",boroughfloodincarray[10][12]],["Water",boroughfloodincarray[10][13]],["Other Land Uses",boroughfloodincarray[10][14]]);
-SouthwarkLU.push(["Domestic Buildings",boroughfloodincarray[11][6]],["Domestic Gardens",boroughfloodincarray[11][7]],["Non Domestic Buildings",boroughfloodincarray[11][8]],["Road",boroughfloodincarray[11][9]],["Rail",boroughfloodincarray[11][10]],["Path",boroughfloodincarray[11][11]],["Greenspace",boroughfloodincarray[11][12]],["Water",boroughfloodincarray[11][13]],["Other Land Uses",boroughfloodincarray[11][14]]);
-LewishamLU.push(["Domestic Buildings",boroughfloodincarray[12][6]],["Domestic Gardens",boroughfloodincarray[12][7]],["Non Domestic Buildings",boroughfloodincarray[12][8]],["Road",boroughfloodincarray[12][9]],["Rail",boroughfloodincarray[12][10]],["Path",boroughfloodincarray[12][11]],["Greenspace",boroughfloodincarray[12][12]],["Water",boroughfloodincarray[12][13]],["Other Land Uses",boroughfloodincarray[12][14]]);
-GreenwichLU.push(["Domestic Buildings",boroughfloodincarray[13][6]],["Domestic Gardens",boroughfloodincarray[13][7]],["Non Domestic Buildings",boroughfloodincarray[13][8]],["Road",boroughfloodincarray[13][9]],["Rail",boroughfloodincarray[13][10]],["Path",boroughfloodincarray[13][11]],["Greenspace",boroughfloodincarray[13][12]],["Water",boroughfloodincarray[13][13]],["Other Land Uses",boroughfloodincarray[13][14]]);
-BexleyLU.push(["Domestic Buildings",boroughfloodincarray[14][6]],["Domestic Gardens",boroughfloodincarray[14][7]],["Non Domestic Buildings",boroughfloodincarray[14][8]],["Road",boroughfloodincarray[14][9]],["Rail",boroughfloodincarray[14][10]],["Path",boroughfloodincarray[14][11]],["Greenspace",boroughfloodincarray[14][12]],["Water",boroughfloodincarray[14][13]],["Other Land Uses",boroughfloodincarray[14][14]]);
-EnfieldLU.push(["Domestic Buildings",boroughfloodincarray[15][6]],["Domestic Gardens",boroughfloodincarray[15][7]],["Non Domestic Buildings",boroughfloodincarray[15][8]],["Road",boroughfloodincarray[15][9]],["Rail",boroughfloodincarray[15][10]],["Path",boroughfloodincarray[15][11]],["Greenspace",boroughfloodincarray[15][12]],["Water",boroughfloodincarray[15][13]],["Other Land Uses",boroughfloodincarray[15][14]]);
-WalthamForestLU.push(["Domestic Buildings",boroughfloodincarray[16][6]],["Domestic Gardens",boroughfloodincarray[16][7]],["Non Domestic Buildings",boroughfloodincarray[16][8]],["Road",boroughfloodincarray[16][9]],["Rail",boroughfloodincarray[16][10]],["Path",boroughfloodincarray[16][11]],["Greenspace",boroughfloodincarray[16][12]],["Water",boroughfloodincarray[16][13]],["Other Land Uses",boroughfloodincarray[16][14]]);
-RedbridgeLU.push(["Domestic Buildings",boroughfloodincarray[17][6]],["Domestic Gardens",boroughfloodincarray[17][7]],["Non Domestic Buildings",boroughfloodincarray[17][8]],["Road",boroughfloodincarray[17][9]],["Rail",boroughfloodincarray[17][10]],["Path",boroughfloodincarray[17][11]],["Greenspace",boroughfloodincarray[17][12]],["Water",boroughfloodincarray[17][13]],["Other Land Uses",boroughfloodincarray[17][14]]);
-SuttonLU.push(["Domestic Buildings",boroughfloodincarray[18][6]],["Domestic Gardens",boroughfloodincarray[18][7]],["Non Domestic Buildings",boroughfloodincarray[18][8]],["Road",boroughfloodincarray[18][9]],["Rail",boroughfloodincarray[18][10]],["Path",boroughfloodincarray[18][11]],["Greenspace",boroughfloodincarray[18][12]],["Water",boroughfloodincarray[18][13]],["Other Land Uses",boroughfloodincarray[18][14]]);
-RichmonduponThamesLU.push(["Domestic Buildings",boroughfloodincarray[19][6]],["Domestic Gardens",boroughfloodincarray[19][7]],["Non Domestic Buildings",boroughfloodincarray[19][8]],["Road",boroughfloodincarray[19][9]],["Rail",boroughfloodincarray[19][10]],["Path",boroughfloodincarray[19][11]],["Greenspace",boroughfloodincarray[19][12]],["Water",boroughfloodincarray[19][13]],["Other Land Uses",boroughfloodincarray[19][14]]);
-MertonLU.push(["Domestic Buildings",boroughfloodincarray[20][6]],["Domestic Gardens",boroughfloodincarray[20][7]],["Non Domestic Buildings",boroughfloodincarray[20][8]],["Road",boroughfloodincarray[20][9]],["Rail",boroughfloodincarray[20][10]],["Path",boroughfloodincarray[20][11]],["Greenspace",boroughfloodincarray[20][12]],["Water",boroughfloodincarray[20][13]],["Other Land Uses",boroughfloodincarray[20][14]]);
-WandsworthLU.push(["Domestic Buildings",boroughfloodincarray[21][6]],["Domestic Gardens",boroughfloodincarray[21][7]],["Non Domestic Buildings",boroughfloodincarray[21][8]],["Road",boroughfloodincarray[21][9]],["Rail",boroughfloodincarray[21][10]],["Path",boroughfloodincarray[21][11]],["Greenspace",boroughfloodincarray[21][12]],["Water",boroughfloodincarray[21][13]],["Other Land Uses",boroughfloodincarray[21][14]]);
-HammersmithandFulhamLU.push(["Domestic Buildings",boroughfloodincarray[22][6]],["Domestic Gardens",boroughfloodincarray[22][7]],["Non Domestic Buildings",boroughfloodincarray[22][8]],["Road",boroughfloodincarray[22][9]],["Rail",boroughfloodincarray[22][10]],["Path",boroughfloodincarray[22][11]],["Greenspace",boroughfloodincarray[22][12]],["Water",boroughfloodincarray[22][13]],["Other Land Uses",boroughfloodincarray[22][14]]);
-KensingtonandChelseaLU.push(["Domestic Buildings",boroughfloodincarray[23][6]],["Domestic Gardens",boroughfloodincarray[23][7]],["Non Domestic Buildings",boroughfloodincarray[23][8]],["Road",boroughfloodincarray[23][9]],["Rail",boroughfloodincarray[23][10]],["Path",boroughfloodincarray[23][11]],["Greenspace",boroughfloodincarray[23][12]],["Water",boroughfloodincarray[23][13]],["Other Land Uses",boroughfloodincarray[23][14]]);
-WestminsterLU.push(["Domestic Buildings",boroughfloodincarray[24][6]],["Domestic Gardens",boroughfloodincarray[24][7]],["Non Domestic Buildings",boroughfloodincarray[24][8]],["Road",boroughfloodincarray[24][9]],["Rail",boroughfloodincarray[24][10]],["Path",boroughfloodincarray[24][11]],["Greenspace",boroughfloodincarray[24][12]],["Water",boroughfloodincarray[24][13]],["Other Land Uses",boroughfloodincarray[24][14]]);
-CamdenLU.push(["Domestic Buildings",boroughfloodincarray[25][6]],["Domestic Gardens",boroughfloodincarray[25][7]],["Non Domestic Buildings",boroughfloodincarray[25][8]],["Road",boroughfloodincarray[25][9]],["Rail",boroughfloodincarray[25][10]],["Path",boroughfloodincarray[25][11]],["Greenspace",boroughfloodincarray[25][12]],["Water",boroughfloodincarray[25][13]],["Other Land Uses",boroughfloodincarray[25][14]]);
-TowerHamletsLU.push(["Domestic Buildings",boroughfloodincarray[26][6]],["Domestic Gardens",boroughfloodincarray[26][7]],["Non Domestic Buildings",boroughfloodincarray[26][8]],["Road",boroughfloodincarray[26][9]],["Rail",boroughfloodincarray[26][10]],["Path",boroughfloodincarray[26][11]],["Greenspace",boroughfloodincarray[26][12]],["Water",boroughfloodincarray[26][13]],["Other Land Uses",boroughfloodincarray[26][14]]);
-IslingtonLU.push(["Domestic Buildings",boroughfloodincarray[27][6]],["Domestic Gardens",boroughfloodincarray[27][7]],["Non Domestic Buildings",boroughfloodincarray[27][8]],["Road",boroughfloodincarray[27][9]],["Rail",boroughfloodincarray[27][10]],["Path",boroughfloodincarray[27][11]],["Greenspace",boroughfloodincarray[27][12]],["Water",boroughfloodincarray[27][13]],["Other Land Uses",boroughfloodincarray[27][14]]);
-HackneyLU.push(["Domestic Buildings",boroughfloodincarray[28][6]],["Domestic Gardens",boroughfloodincarray[28][7]],["Non Domestic Buildings",boroughfloodincarray[28][8]],["Road",boroughfloodincarray[28][9]],["Rail",boroughfloodincarray[28][10]],["Path",boroughfloodincarray[28][11]],["Greenspace",boroughfloodincarray[28][12]],["Water",boroughfloodincarray[28][13]],["Other Land Uses",boroughfloodincarray[28][14]]);
-HaringeyLU.push(["Domestic Buildings",boroughfloodincarray[29][6]],["Domestic Gardens",boroughfloodincarray[29][7]],["Non Domestic Buildings",boroughfloodincarray[29][8]],["Road",boroughfloodincarray[29][9]],["Rail",boroughfloodincarray[29][10]],["Path",boroughfloodincarray[29][11]],["Greenspace",boroughfloodincarray[29][12]],["Water",boroughfloodincarray[29][13]],["Other Land Uses",boroughfloodincarray[29][14]]);
-NewhamLU.push(["Domestic Buildings",boroughfloodincarray[30][6]],["Domestic Gardens",boroughfloodincarray[30][7]],["Non Domestic Buildings",boroughfloodincarray[30][8]],["Road",boroughfloodincarray[30][9]],["Rail",boroughfloodincarray[30][10]],["Path",boroughfloodincarray[30][11]],["Greenspace",boroughfloodincarray[30][12]],["Water",boroughfloodincarray[30][13]],["Other Land Uses",boroughfloodincarray[30][14]]);
-BarkingandDagenhamLU.push(["Domestic Buildings",boroughfloodincarray[31][6]],["Domestic Gardens",boroughfloodincarray[31][7]],["Non Domestic Buildings",boroughfloodincarray[31][8]],["Road",boroughfloodincarray[31][9]],["Rail",boroughfloodincarray[31][10]],["Path",boroughfloodincarray[31][11]],["Greenspace",boroughfloodincarray[31][12]],["Water",boroughfloodincarray[31][13]],["Other Land Uses",boroughfloodincarray[31][14]]);
-CityofLondonLU.push(["Domestic Buildings",boroughfloodincarray[32][6]],["Domestic Gardens",boroughfloodincarray[32][7]],["Non Domestic Buildings",boroughfloodincarray[32][8]],["Road",boroughfloodincarray[32][9]],["Rail",boroughfloodincarray[32][10]],["Path",boroughfloodincarray[32][11]],["Greenspace",boroughfloodincarray[32][12]],["Water",boroughfloodincarray[32][13]],["Other Land Uses",boroughfloodincarray[32][14]]);
 
 //layout child old data
 if (KingstonuponThamesCO = []){
@@ -1087,7 +1020,7 @@ layoutTable.getRow(2).height('33%');
 
 layoutTable.getCell(0, 0).rowSpan(3).content(mainChart());
 layoutTable.getCell(0, 1).content(Detailline());
-layoutTable.getCell(1, 1).content(Detailstick());
+layoutTable.getCell(1, 1).content(Detailtableone());
 layoutTable.getCell(2, 1).content(Detailtable());
 layoutTable.container('container1');
 layoutTable.draw();
@@ -1260,151 +1193,151 @@ function selectfloodincMap() {
 		}
 	}
 	
+	for (i = 0; i < sitearray.length; i++) { 
+	
+	if (clickchartfloodinc === sitearray[i][2] ){
+		if (sitearray[i][0]==="Site A"&&sitearray[i][1]==="Area of Site"){
+			sitea_areasite = sitearray[i][3].toString()+'%';
+		}
+		if (sitearray[i][0]==="Site A"&&sitearray[i][1]==="Distance from A Road"){
+			sitea_road = sitearray[i][3].toString()+'%';
+		}
+		if (sitearray[i][0]==="Site A"&&sitearray[i][1]==="Distance from center of borough"){
+			sitea_center = sitearray[i][3].toString()+'%';
+		}
+		if (sitearray[i][0]==="Site B"&&sitearray[i][1]==="Area of Site"){
+			siteb_areasite = sitearray[i][3].toString()+'%';
+		}
+		if (sitearray[i][0]==="Site B"&&sitearray[i][1]==="Distance from A Road"){
+			siteb_road = sitearray[i][3].toString()+'%';
+		}
+		if (sitearray[i][0]==="Site B"&&sitearray[i][1]==="Distance from center of borough"){
+			siteb_center = sitearray[i][3].toString()+'%';
+		}
+		if (sitearray[i][0]==="Site C"&&sitearray[i][1]==="Area of Site"){
+			sitec_areasite = sitearray[i][3].toString()+'%';
+		}
+		if (sitearray[i][0]==="Site C"&&sitearray[i][1]==="Distance from A Road"){
+			sitec_road = sitearray[i][3].toString()+'%';
+		}
+		if (sitearray[i][0]==="Site C"&&sitearray[i][1]==="Distance from center of borough"){
+			sitec_center = sitearray[i][3].toString()+'%';
+		}
+	}
+	}
+	
+	
 	//arrange data for chart two and three
 	if (clickchartfloodinc === 'Kingston upon Thames'){
-		dataLU = KingstonuponThamesLU;
 		dataCO = KingstonuponThamesCO;
 	}
 	
 	if (clickchartfloodinc === 'Croydon'){
-		dataLU = CroydonLU;
 		dataCO = CroydonCO;
 	}
 	
 	if (clickchartfloodinc === 'Bromley'){
-		dataLU = BromleyLU;
 		dataCO = BromleyCO;
 	}
 	if (clickchartfloodinc === 'Hounslow'){
-		dataLU = HounslowLU;
 		dataCO = HounslowCO;
 	}
 	
 	if (clickchartfloodinc === 'Ealing'){
-		dataLU = EalingLU;
 		dataCO = EalingCO;
 	}
 	
 	if (clickchartfloodinc === 'Havering'){
-		dataLU = HaveringLU;
 		dataCO = HaveringCO;
 	}
 	
 	if (clickchartfloodinc === 'Hillingdon'){
-		dataLU = HillingdonLU;
 		dataCO = HillingdonCO;
 	}
 	if (clickchartfloodinc === 'Harrow'){
-		dataLU = HarrowLU;
 		dataCO = HarrowCO;
 	}
 	if (clickchartfloodinc === 'Brent'){
-		dataLU = BrentLU;
 		dataCO = BrentCO;
 	}
 	if (clickchartfloodinc === 'Barnet'){
-		dataLU = BarnetLU;
 		dataCO = BarnetCO;
 	}
 	if (clickchartfloodinc === 'Lambeth'){
-		dataLU = LambethLU;
 		dataCO = LambethCO;
 	}
 	if (clickchartfloodinc === 'Southwark'){
-		dataLU = SouthwarkLU;
 		dataCO = SouthwarkCO;
 	}
 	if (clickchartfloodinc === 'Southwark'){
-		dataLU = SouthwarkLU;
 		dataCO = SouthwarkCO;
 	}
 	if (clickchartfloodinc === 'Lewisham'){
-		dataLU = LewishamLU;
 		dataCO = LewishamCO;
 	}
 	if (clickchartfloodinc === 'Greenwich'){
-		dataLU = GreenwichLU;
 		dataCO = GreenwichCO;
 	}
 	if (clickchartfloodinc === 'Bexley'){
-		dataLU = BexleyLU;
 		dataCO = BexleyCO;
 	}
 	if (clickchartfloodinc === 'Enfield'){
-		dataLU = EnfieldLU;
 		dataCO = EnfieldCO;
 	}
 	if (clickchartfloodinc === 'Waltham Forest'){
-		dataLU = WalthamForestLU;
 		dataCO = WalthamForestCO;
 	}
 	if (clickchartfloodinc === 'Redbridge'){
-		dataLU = RedbridgeLU;
 		dataCO = RedbridgeCO;
 	}
 	if (clickchartfloodinc === 'Sutton'){
-		dataLU = SuttonLU;
 		dataCO = SuttonCO;
 	}
 	if (clickchartfloodinc === 'Richmond upon Thames'){
-		dataLU = RichmonduponThamesLU;
 		dataCO = RichmonduponThamesCO;
 	}
 	if (clickchartfloodinc === 'Merton'){
-		dataLU = MertonLU;
 		dataCO = MertonCO;
 	}
 	if (clickchartfloodinc === 'Wandsworth'){
-		dataLU = WandsworthLU;
 		dataCO = WandsworthCO;
 	}
 	if (clickchartfloodinc === 'Hammersmith and Fulham'){
-		dataLU = HammersmithandFulhamLU;
 		dataCO = HammersmithandFulhamCO;
 	}
 	if (clickchartfloodinc === 'Kensington and Chelsea'){
-		dataLU = KensingtonandChelseaLU;
 		dataCO = KensingtonandChelseaCO;
 	}
 	if (clickchartfloodinc === 'Westminster'){
-		dataLU = WestminsterLU;
 		dataCO = WestminsterCO;
 	}
 	if (clickchartfloodinc === 'Camden'){
-		dataLU = CamdenLU;
 		dataCO = CamdenCO;
 	}
 	if (clickchartfloodinc === 'Tower Hamlets'){
-		dataLU = TowerHamletsLU;
 		dataCO = TowerHamletsCO;
 	}
 	if (clickchartfloodinc === 'Islington'){
-		dataLU = IslingtonLU;
 		dataCO = IslingtonCO;
 	}
 	if (clickchartfloodinc === 'Hackney'){
-		dataLU = HackneyLU;
 		dataCO = HackneyCO;
 	}
 	if (clickchartfloodinc === 'Haringey'){
-		dataLU = HaringeyLU;
 		dataCO = HaringeyCO;
 	}
 	if (clickchartfloodinc === 'Newham'){
-		dataLU = NewhamLU;
 		dataCO = NewhamCO;
 	}
 	if (clickchartfloodinc === 'Barking and Dagenham'){
-		dataLU = BarkingandDagenhamLU;
 		dataCO = BarkingandDagenhamCO;
 	}
 	if (clickchartfloodinc === 'City of London'){
-		dataLU = CityofLondonLU;
 		dataCO = CityofLondonCO;
 	}
 	
 	layoutTable.getCell(0, 1).content(Detailline());
-	layoutTable.getCell(1, 1).content(Detailstick());
+	layoutTable.getCell(1, 1).content(Detailtableone());
 	layoutTable.getCell(2, 1).content(Detailtable());
 	
 }
@@ -1435,38 +1368,91 @@ function Detailline(){
 	
 	return chartone
 }
-
-function Detailstick(){
-	// create a chart
-charttwo = anychart.column();
-
-// create an area series and set the data
-var series = charttwo.stick(dataLU);
-
-series.name("Land Use")
-.color('#c68c53');
-
-var title;
-title = charttwo.title();
-title.enabled(true);
-title.text("Land Use Per Borough");
-title.fontSize(10);
-
-// create extra axis on the right side of chart
-var yTitle = charttwo.yAxis().title();
-yTitle.enabled(true);
-yTitle.text('Land Use Area (%)');
-yTitle.fontSize(10);
-
-var labelsx = charttwo.xAxis().labels();
-labelsx.fontSize(8);
-var labelsy = charttwo.yAxis().labels();
-labelsy.fontSize(8);
+var tableone;
+function Detailtableone(){
+tableone = anychart.standalones.table(10,3 );
+tableone.cellBorder(null);
+tableone.getCol(0).width('33.33%');
+tableone.getCol(1).width('33.33%');
+tableone.getCol(2).width('33.33%');
+tableone.getRow(0).height('10%');
+tableone.getRow(1).height('10%');
+tableone.getRow(2).height('10%');
+tableone.getRow(3).height('10%');
+tableone.getRow(4).height('10%');
+tableone.getRow(5).height('10%');
+tableone.getRow(6).height('10%');
+tableone.getRow(7).height('10%');
+tableone.getRow(8).height('10%');
+tableone.getRow(9).height('10%');
 
 
-charttwo.draw();
 
-return charttwo
+tableone.getCell(0, 0).colSpan(3).content('Available Site')
+.fontSize(8);
+tableone.getCell(1, 1).content('Area of site')
+.fontSize(8);
+tableone.getCell(2, 1).content('Distance from road')
+.fontSize(8);
+tableone.getCell(3, 1).content('Distance from center')
+.fontSize(8);
+tableone.getCell(4, 1).content('Area of site')
+.fontSize(8);
+tableone.getCell(5, 1).content('Distance from road')
+.fontSize(8);
+tableone.getCell(6, 1).content('Distance from center')
+.fontSize(8);
+tableone.getCell(7, 1).content('Area of site')
+.fontSize(8);
+tableone.getCell(8, 1).content('Distance from road')
+.fontSize(8);
+tableone.getCell(9, 1).content('Distance from center')
+.fontSize(8);
+tableone.getCell(1, 2).content(sitea_areasite);
+tableone.getCell(2, 2).content(sitea_road);
+tableone.getCell(3, 2).content(sitea_center);
+tableone.getCell(4, 2).content(siteb_areasite);
+tableone.getCell(5, 2).content(siteb_road);
+tableone.getCell(6, 2).content(siteb_center);
+tableone.getCell(7, 2).content(sitec_areasite);
+tableone.getCell(8, 2).content(sitec_road);
+tableone.getCell(9, 2).content(sitec_center);
+tableone.getCell(1, 0).rowSpan(3).content('Site A')
+.fontSize(8);
+tableone.getCell(4, 0).rowSpan(3).content('Site B')
+.fontSize(8);
+tableone.getCell(7, 0).rowSpan(3).content('Site C')
+.fontSize(8);
+
+tableone.getRow(0)     
+.cellFill("#37474f");
+tableone.getRow(1)         
+.cellFill("#37474f"); 
+tableone.getRow(2)     
+.cellFill("#37474f");
+tableone.getRow(3)         
+.cellFill("#37474f"); 
+tableone.getRow(4)     
+.cellFill("#37474f");
+tableone.getRow(5)         
+.cellFill("#37474f");
+tableone.getRow(6)     
+.cellFill("#37474f");
+tableone.getRow(7)         
+.cellFill("#37474f");  
+tableone.getRow(8)         
+.cellFill("#37474f"); 
+tableone.getRow(9)         
+.cellFill("#37474f"); 
+
+tableone.cellBorder("#b0bec5").hAlign("center").vAlign("middle");
+	tableone.cellPadding(0)     
+	  .fontWeight(90)   
+	  .fontSize(16)           
+	  .fontColor('#b0bec5');  
+
+tableone.draw();
+return tableone
 }
 
 function Detailtable(){
@@ -1530,3 +1516,42 @@ for (i = 0; i < jproperties.length; i++) {
 }
 
 }
+
+var sitearray = [];
+var sitea_areasite; 
+var siteb_areasite; 
+var sitec_areasite; 
+var sitea_road; 
+var siteb_road; 
+var sitec_road; 
+var sitea_center; 
+var siteb_center; 
+var sitec_center; 
+function getSite(){
+	clientone = new XMLHttpRequest();
+	clientone.open('GET','GeoJSON/Site_Flood.geojson');
+	clientone.onreadystatechange = siteResponse;
+	clientone.send();
+}
+// create the code to wait for the response from the data server, and process the response once it is received
+function siteResponse(){
+if(clientone.readyState == 4){
+	var sitedata = clientone.responseText;
+	loadsitelayer(sitedata);
+	}
+}
+// convert the received data - which is text - to JSON format and add it to the map
+function loadsitelayer(sitedata){
+sitejson = JSON.parse(sitedata);
+
+var features = []; 
+features = sitejson.features; 
+var jproperties = sitejson.features.map(function (el) { return el.properties; });
+var i;
+for (i = 0; i < jproperties.length; i++) { 
+	sitearray.push(Object.values(jproperties[i]));
+}
+
+}
+
+getSite();
