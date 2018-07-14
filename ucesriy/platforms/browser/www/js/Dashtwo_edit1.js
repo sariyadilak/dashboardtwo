@@ -1392,19 +1392,19 @@ tableone.getCell(0, 0).colSpan(3).content('Available Site')
 .fontSize(8);
 tableone.getCell(1, 1).content('Area of site')
 .fontSize(8);
-tableone.getCell(2, 1).content('Distance from road')
+tableone.getCell(2, 1).content('Distance from pipe')
 .fontSize(8);
 tableone.getCell(3, 1).content('Distance from center')
 .fontSize(8);
 tableone.getCell(4, 1).content('Area of site')
 .fontSize(8);
-tableone.getCell(5, 1).content('Distance from road')
+tableone.getCell(5, 1).content('Distance from pipe')
 .fontSize(8);
 tableone.getCell(6, 1).content('Distance from center')
 .fontSize(8);
 tableone.getCell(7, 1).content('Area of site')
 .fontSize(8);
-tableone.getCell(8, 1).content('Distance from road')
+tableone.getCell(8, 1).content('Distance from pipe')
 .fontSize(8);
 tableone.getCell(9, 1).content('Distance from center')
 .fontSize(8);
