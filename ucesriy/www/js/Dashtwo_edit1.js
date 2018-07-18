@@ -268,8 +268,8 @@ floodrisklayer.resetStyle(e.target);
 
 function onEachfloodriskFeature(feature, layer) {
 bo_name = feature.properties.NAME ;
-floodrisk = feature.properties.SUM_percen;
-onpopup = "<b>Borough Name:</b>"+bo_name +"<br />"+"<b>Flood Risk Area%:</b>"+floodrisk 
+floodrisk = feature.properties.percent;
+onpopup = "<b>Borough Name:</b>"+bo_name +"<br />"+"<b>Flood Risk Area:</b>"+floodrisk +"%"
 
 
 
@@ -365,13 +365,13 @@ function mainChartpump() {
 	chartonepump = anychart.bar();
 	// create the first series, set the data and name
 	seriespump = chartonepump.bar(seriesData_1);
-	seriespump.name("Flood Risk Area (%) per Borough")
+	seriespump.name("Flood Risk Area (%) within Borough")
 	.color('#ff8533');
 	
 	var title;
 	title = chartonepump.title();
 	title.enabled(true);
-	title.text("Flood Risk Area (%) per Borough");
+	title.text("Flood Risk Area (%) within Borough");
 	title.fontSize(10);
 	
 	var labelsx = chartonepump.xAxis().labels();
@@ -437,7 +437,7 @@ function selectfloodpumpMap() {
 	
 		return {
 				radius: 5,
-				fillColor: "#476b6b",
+				fillColor: "#0000ff",
 				color: "#000000",
 				weight: 1,
 				opacity: 1,
@@ -1397,21 +1397,21 @@ tableone.getCell(0, 0).colSpan(3).content('Available Site')
 tableone.getCell(1, 1).content('Area of site')
 .fontSize(8);
 tableone.getCell(2, 1).content('Distance from pipe')
-.fontSize(8);
+.fontSize(7);
 tableone.getCell(3, 1).content('Distance from center')
-.fontSize(8);
+.fontSize(6);
 tableone.getCell(4, 1).content('Area of site')
 .fontSize(8);
 tableone.getCell(5, 1).content('Distance from pipe')
-.fontSize(8);
+.fontSize(7);
 tableone.getCell(6, 1).content('Distance from center')
-.fontSize(8);
+.fontSize(6);
 tableone.getCell(7, 1).content('Area of site')
 .fontSize(8);
 tableone.getCell(8, 1).content('Distance from pipe')
-.fontSize(8);
+.fontSize(7);
 tableone.getCell(9, 1).content('Distance from center')
-.fontSize(8);
+.fontSize(6);
 tableone.getCell(1, 2).content(sitea_areasite);
 tableone.getCell(2, 2).content(sitea_road);
 tableone.getCell(3, 2).content(sitea_center);

@@ -719,7 +719,9 @@ function selectfloodincFeature(e) {
 	if (highchart === 'City of London'){
 		dataCO = CityofLondonCO;
 	}
-		
+	child = dataCO[1][0];
+	old = dataCO[1][1];
+	working = dataCO[1][2];
 	anychart.onDocumentReady(chartfloodinc);
 	selectonchartfloodinc();
 
@@ -1335,7 +1337,9 @@ function selectfloodincMap() {
 	if (clickchartfloodinc === 'City of London'){
 		dataCO = CityofLondonCO;
 	}
-	
+	child = dataCO[1][0];
+	old = dataCO[1][1];
+	working = dataCO[1][2];
 	layoutTable.getCell(0, 1).content(Detailline());
 	layoutTable.getCell(1, 1).content(Detailtableone());
 	layoutTable.getCell(2, 1).content(Detailtable());
@@ -1455,24 +1459,44 @@ tableone.draw();
 return tableone
 }
 
+var child;
+var old;
+var working;
+
 function Detailtable(){
-	var rawData = dataCO;
 		// create table
-	table = anychart.standalones.table(2,3);
-	table.contents(rawData);
+	table = anychart.standalones.table(3,3);
+	
 	 // settings for the first column
 	table.getRow(0)
-    .height(95)           // set column width
+    .height(63.33)           // set column width
     .cellFill("#37474f")  // set column background color
 	
 	table.getRow(1)
-    .height(95)           // set column width
+    .height(63.33)           // set column width
     .cellFill("#37474f") 
-  
+	
+	table.getRow(2)
+    .height(63.33)           // set column width
+    .cellFill("#37474f") 
+
 	table.getCol(0).width(90);
 	table.getCol(1).width(90);
 	table.getCol(2).width(95);
 	
+	table.getCell(0, 0).colSpan(3).content('Children,Old, Working Age per Borough')
+	.fontSize(10);
+	table.getCell(1, 0).content('Child AGE(%)')
+	.fontSize(8);
+	table.getCell(1, 1).content('Old AGE(%)')
+	.fontSize(8);
+	table.getCell(1, 2).content('Working AGE(%)')
+	.fontSize(8);
+	table.getCell(2, 0).content(child);
+	table.getCell(2, 1).content(old);
+	table.getCell(2, 2).content(working);
+	
+
 	table.cellBorder("#b0bec5").hAlign("center").vAlign("middle");
 	table.cellPadding(0)      // set 10px padding from each border of every cell
 	  .fontWeight(90)   // set text font weight
