@@ -26,10 +26,8 @@ layer.setStyle({
 	fillOpacity: 0.7
 });
 
-if (!L.Browser.ie && !L.Browser.opera && !L.Browser.edge) {
-	layer.bringToFront();
 }
-}
+
 	
 	//adding interaction
 function highlightpumpstaFeature(e) {
@@ -233,6 +231,9 @@ if (boroughfloodinclayer){
 		mymap.removeLayer(boroughfloodinclayer);
 	}
 	
+if (pumpstationlayer){
+	mymap.removeLayer(pumpstationlayer);
+}
 
 
 // REMOVING PREVIOUS INFO BOX
@@ -321,11 +322,17 @@ for (i = 0; i < floodriskarray.length; i++) {
 if (boroughfloodinclayer){
 		mymap.removeLayer(boroughfloodinclayer);
 	}
+	
+if (pumpstationlayer){
+	mymap.removeLayer(pumpstationlayer);
+}
+
 
 // REMOVING PREVIOUS INFO BOX
 if (legend != undefined) {
 legend.remove();
 }
+
 
 floodrisklayer=L.geoJson(floodriskjson, {style: FloodRiskstyle,onEachFeature: onEachfloodriskFeature}).addTo(mymap);
 // change the map zoom so that all the data is shown
@@ -961,17 +968,21 @@ if (CityofLondonCO= []){
 CityofLondonCO.unshift(["Child AGE %","Old AGE %","Working AGE %"]);
 CityofLondonCO.push([boroughfloodincarray[32][4].toString(),boroughfloodincarray[32][5].toString(),boroughfloodincarray[32][15].toString()]);}
 
-if (floodrisklayer){
-		mymap.removeLayer(floodrisklayer);
+if (boroughfloodinclayer){
+		mymap.removeLayer(boroughfloodinclayer);
 	}
+	
 if (pumpstationlayer){
-		mymap.removeLayer(pumpstationlayer);
-	}
+	mymap.removeLayer(pumpstationlayer);
+}
+if (floodrisklayer){
+	mymap.removeLayer(floodrisklayer);
+}
 
+// REMOVING PREVIOUS INFO BOX
 if (legend != undefined) {
 legend.remove();
 }
-
 
 boroughfloodinclayer=L.geoJson(boroughfloodincjson, {style: FloodIncBostyle,onEachFeature: onEachfloodincboFeature}).addTo(mymap);
 // change the map zoom so that all the data is shown
