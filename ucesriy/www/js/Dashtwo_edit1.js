@@ -16,6 +16,7 @@ var floodtable;
 var fireinctable;
 var firefloodinctable
 
+//highlight feature
 function highlightFeature(e) {
 var layer = e.target;
 
@@ -29,7 +30,7 @@ layer.setStyle({
 }
 
 	
-	//adding interaction
+//highlight pump station
 function highlightpumpstaFeature(e) {
 var layer = e.target;
 
@@ -48,8 +49,7 @@ if (!L.Browser.ie && !L.Browser.opera && !L.Browser.edge) {
 }
 
 
-// var pumpstacoords;
-// var pumpGroup; 
+//reset highlight for the pump station
 function resetpumpstaHighlight(e) {
  if (!e.target.feature.properties.selected){
 var layer = e.target;
@@ -71,14 +71,14 @@ var clickmap;
 var seriespumpstaarray =[];
 var seriesfloodarray = [];
 var highchartpumpsta;
-//click on map
+//click on the mapping element and select both charting element and mapping element
 function selectpumpfloodriskFeature(e) {
 	e.target.feature.properties.selected = !e.target.feature.properties.selected;	
 	clickmap = e.target.feature.properties.NAME;
 	clickpump  = e.target.feature.properties.Borough_BN;
 	var seriespumpstaarray=seriespump.xe.FN;
 	var seriesfloodarray=seriespump.xe.FN;
-
+	//select on chart
 	var i =seriesfloodarray.indexOf(clickmap);
 		seriespump.select([i]);
 		
@@ -145,8 +145,8 @@ function selectpumpfloodriskFeature(e) {
 
 }
 
-	
 
+//select on chart
 function selectonchartfloodrisk(){
 	
 	var seriesfloodarray=seriespump.xe.FN;
@@ -157,7 +157,7 @@ function selectonchartfloodrisk(){
 
 }
 
-
+//style the color for pump station on the map
 var pumpstaStyle = {
         radius: 5,
         fillColor: "#ff9933",
@@ -176,7 +176,7 @@ function pumpstadisplay (feature, latlng) {
 }	
 	
 	
-// pump station tooltip
+// pump station pop-up element on the map
 function onEachpumpstaFeature(feature, layer) {
 Borough = feature.properties.Borough_BN ;
 onpopup = "<b>Pump Station in Borough:</b>"+Borough;
@@ -248,7 +248,7 @@ mymap.fitBounds(pumpstationlayer.getBounds());
 anychart.onDocumentReady(chartpumpsta);
 }
 
-//floodrisk area
+//style color of flood risk area on the map
 function FloodRiskstyle(feature) {
 	return {
 		fillColor: '#66a3ff  ',
@@ -258,7 +258,7 @@ function FloodRiskstyle(feature) {
 		fillOpacity: 0.7
 	};
 }
-
+// reset style of flood risk area
 function resetfloodriskHighlight(e) {
 	if (!e.target.feature.properties.selected){
 floodrisklayer.resetStyle(e.target);
@@ -266,7 +266,7 @@ floodrisklayer.resetStyle(e.target);
 }
 
 
-
+//create pop-up element on flood risk area on the map
 function onEachfloodriskFeature(feature, layer) {
 bo_name = feature.properties.NAME ;
 floodrisk = feature.properties.percent;
@@ -307,6 +307,7 @@ function loadfloodrisklayer(floodriskdata){
 var floodriskjson = JSON.parse(floodriskdata);
 var features = []; 
 features = floodriskjson.features; 
+// convert data from geojson to anychart data format
 var jproperties = floodriskjson.features.map(function (el) { return el.properties; });
 var i;
 if (floodriskarray=[]){
@@ -341,7 +342,9 @@ getPumpStation();
 }
 
 function chartpumpsta(){
+	// add dark blue theme
 anychart.theme('darkBlue');
+//layout dashboard for the first layer
 	if ( layoutTable != null)  layoutTable.container(null);
 
 
@@ -365,6 +368,7 @@ layoutTable.draw();
 
 var chartonepump;
 var seriespump;
+//create main chart for the first layer
 function mainChartpump() {
 	data = anychart.data.set(floodriskper);
 	var seriesData_1 = data.mapAs({x: 0, value: 1});
@@ -395,6 +399,7 @@ function mainChartpump() {
 var linegauge;
 var floodriskvalue;
 var seriesData_1;
+//create detail chart for layer one  (bullet chart for flood risk percentage)
 function Detaillinegauge(){
 
 
@@ -432,13 +437,13 @@ function chartPointClickpump(e) {
 	selectfloodpumpMap();
 	}
 	
-//function when select on chart
+//function when click on chart and select on the mapping element
 function selectfloodpumpMap() {
 
 	//select on pump sta map
 	pumpstationlayer.setStyle(function (feature){
 	
-	//select on map
+	//highlight pump station on the map
 	if (clickchartpump === feature.properties.Borough_BN ){
 	feature.properties.selected = true;
 	
@@ -510,7 +515,7 @@ function FloodIncBostyle(feature) {
 		fillOpacity: 0.7
 	};
 }
-
+//reset the highlight on the map
 function resetfloodincboHighlight(e) {
 	if (!e.target.feature.properties.selected){
 boroughfloodinclayer.resetStyle(e.target);
@@ -524,7 +529,7 @@ function selectfloodincFeature(e) {
 	e.target.feature.properties.selected = !e.target.feature.properties.selected;
 	var seriesfloodincarray=seriesfloodinc.xe.FN;
 
-
+	//highlight the chart when click on the map
 	clickmap = e.target.feature.properties.NAME;
 	var i =seriesfloodincarray.indexOf(clickmap);
 		seriesfloodinc.select([i]);
@@ -552,13 +557,13 @@ function selectfloodincFeature(e) {
 		}
 	});
 	
-	//arrange data for detail chart one
+	//highlight the chart
 	x = barchart.getSelectedPoints();
 	highchart = x[0].Gn.categoryname;
 
 	
 	for (i = 0; i < floodincarray.length; i++) { 
-	
+	//filter data for the detail chart one (flood incident per month)
 	if (highchart === floodincarray[i][2] ){
 	
 	if (floodincarray[i][1] === '0'){
@@ -587,7 +592,7 @@ function selectfloodincFeature(e) {
 	floodincmonth.push(['Dec',floodincarray[i][3]]);}
 		}
 	}
-	
+	//filter data for available site for pump station
 	for (i = 0; i < sitearray.length; i++) { 
 	
 	if (highchart === sitearray[i][2] ){
@@ -621,7 +626,7 @@ function selectfloodincFeature(e) {
 	}
 	}
 	
-		//arrange data for chart two and three
+		//filter data for detail chart four (table for child and old age)
 	if (highchart === 'Kingston upon Thames'){
 		dataCO = KingstonuponThamesCO;
 	}
@@ -733,14 +738,14 @@ function selectfloodincFeature(e) {
 	selectonchartfloodinc();
 
 }
-
+//highlight on the chart
 function selectonchartfloodinc(){
 	var seriesfloodincarray=seriesfloodinc.xe.FN;
 	var i =seriesfloodincarray.indexOf(clickmap);
 		seriesfloodinc.select([i]);
 }
 
-
+//create pop up for London  borough
 function onEachfloodincboFeature(feature, layer) {
 bo_name = feature.properties.NAME ;
 floodinc = feature.properties.FloodInc_1;
@@ -817,7 +822,7 @@ var features = [];
 features = boroughfloodincjson.features; 
 var jproperties = boroughfloodincjson.features.map(function (el) { return el.properties; });
 var i;
-
+//arrange data to anychart data format
 if (boroughfloodincarray = []){
 for (i = 0; i < jproperties.length; i++) { 
 	boroughfloodincarray.push(Object.values(jproperties[i]));}
@@ -1014,7 +1019,7 @@ legend.addTo(mymap);
 anychart.onDocumentReady(chartfloodinc);
 }
 
-//chart for (fire station, population and borough)
+//chart for flood incident
 function chartfloodinc() {
 	getfloodIncident();
 	anychart.theme('darkBlue');
@@ -1174,7 +1179,7 @@ function selectfloodincMap() {
 		 return FloodIncBostyle(feature);
 		}
 	});
-	
+	//fi;ter data for flood incident per month
 	for (i = 0; i < floodincarray.length; i++) { 
 	
 	if (clickchartfloodinc === floodincarray[i][2] ){
@@ -1205,7 +1210,7 @@ function selectfloodincMap() {
 	floodincmonth.push(['Dec',floodincarray[i][3]]);}
 		}
 	}
-	
+	//filter data for the available site
 	for (i = 0; i < sitearray.length; i++) { 
 	
 	if (clickchartfloodinc === sitearray[i][2] ){
@@ -1240,7 +1245,7 @@ function selectfloodincMap() {
 	}
 	
 	
-	//arrange data for chart two and three
+	//filter data for child, old and working age
 	if (clickchartfloodinc === 'Kingston upon Thames'){
 		dataCO = KingstonuponThamesCO;
 	}
@@ -1356,7 +1361,7 @@ function selectfloodincMap() {
 	layoutTable.getCell(2, 1).content(Detailtable());
 	
 }
-
+//create detail chart two (line chart for flood incident per month)
 function Detailline(){
 	var data = anychart.data.set(floodincmonth);
 	var seriesData_1 = data.mapAs({x: 0, value: 1});
@@ -1384,6 +1389,7 @@ function Detailline(){
 	return chartone
 }
 var tableone;
+//create detail chart three (table - for the available site)
 function Detailtableone(){
 tableone = anychart.standalones.table(10,3 );
 tableone.cellBorder(null);
@@ -1473,7 +1479,7 @@ return tableone
 var child;
 var old;
 var working;
-
+// detail chart four - table for child and old age
 function Detailtable(){
 		// create table
 	table = anychart.standalones.table(3,3);
